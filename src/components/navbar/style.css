@@ -1,0 +1,688 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body header {
+    position: relative;
+}
+
+body a {
+    font-size: 1rem;
+}
+
+body p {
+    font-family: "Poiret One", cursive;
+    font-size: 1.5rem;
+}
+
+body label {
+    font-family: "Poiret One", cursive;
+    font-size: 1rem;
+}
+
+body input {
+    font-family: "Poiret One", cursive;
+    font-size: 1rem;
+}
+
+body button {
+    font-family: "Poiret One", cursive;
+    font-size: 1.3rem;
+}
+
+body img {
+    transition: 0.2s;
+}
+
+body img:hover {
+    transform: scale(1.002);
+}
+
+body h2 {
+    font-family: "Poiret One", cursive;
+}
+
+body h4 {
+    font-family: "Poiret One", cursive;
+    font-size: 3rem;
+    margin-left: 2%;
+    margin-top: 1%;
+    color: black;
+}
+
+body h3 {
+    font-family: "Poiret One", cursive;
+    font-size: 2rem;
+    color: black;
+}
+
+body h4 {
+    font-family: "Poiret One", cursive;
+}
+
+body th {
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: #145374;
+}
+
+body th label {
+    font-size: 1.5rem;
+}
+
+body td {
+    padding: 10px 5px;
+}
+
+body td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+body td img {
+    margin-right: 10px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+footer a:hover {
+    color: #226597;
+    text-decoration: none;
+    display: inline-block;
+    transform: scale(1.1);
+}
+
+ol li {
+    list-style: none;
+}
+
+ol li a {
+    color: black;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-table {
+    border-top: 3px solid #145374;
+    width: 100%;
+    max-width: 22rem;
+}
+
+.remove-option {
+    text-decoration: none;
+    color: #c65102;
+    font-size: 12px;
+    margin-left: 10px;
+    border: none;
+}
+
+.remove-option:hover {
+    text-decoration: none;
+    color: red;
+}
+
+
+/*navbar estilos relacionados*/
+
+.navbar__logo {
+    display: inline-block;
+    width: 8%;
+    height: 8%;
+}
+
+.navbar__logo--tamano {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    animation-name: fading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar__background--color {
+    background-color: #145374;
+}
+
+.navbar__sublist {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navbar-toggler {
+    z-index: 10;
+}
+
+.nav__link--hover:hover a {
+    color: #145374;
+    font-size: 1.1rem;
+}
+
+.msg {
+    position: absolute;
+    color: white;
+}
+
+
+/*hr personalizada debajo del titulo de seccion*/
+
+.hr__personalized {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+/*estilos para main y submain*/
+
+.main__imagenes--display {
+    float: left;
+    width: 50%;
+}
+
+.submain {
+    margin-bottom: 20px;
+}
+
+.submain__img--tamano {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.mainSub {
+    display: inline-flex;
+}
+
+.mainSub img {
+    width: 100%;
+    transition: 0.2s;
+}
+
+
+/*footer estilos*/
+
+.footerMain__fondo--color {
+    background-image: linear-gradient(#87c0cd, #226597);
+}
+
+.footerMain__fondo--color label {
+    font-family: "Poiret One", cursive;
+    color: white;
+}
+
+.footerMain__lists--display {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footerMain__list {
+    display: flex;
+    width: 20%;
+    height: 25%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.footerMain__logo--tamano {
+    width: 7%;
+    height: 7%;
+}
+
+.footerMain__logotienda--tamano {
+    width: 75px;
+    height: 75px;
+}
+
+.footer__copyright--fondo {
+    background-color: #113f67;
+    text-align: center;
+}
+
+.footer__copyright--fondo label {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footerMain {
+    margin-top: -20px;
+}
+
+.footerMain a {
+    color: white;
+}
+
+.footerMain__list--title {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+
+/*estilos de elementos*/
+
+.card {
+    width: 15rem;
+    height: 26.5rem;
+    margin: 15px;
+}
+
+.card h2 {
+    color: black;
+}
+
+.card .blue__button {
+    color: white;
+    background-color: #226597;
+    position: relative;
+    bottom: 5px;
+}
+
+.card a:hover {
+    background-color: #145374;
+    color: white;
+}
+
+.card .card-footer {
+    border: none;
+    background-color: #FFCD89;
+}
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card .image img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.card .image .img__ancha {
+    margin-top: 70px;
+}
+
+.card .details__card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    /*100%*/
+    height: 100%;
+    background-image: linear-gradient(#145374, #87c0cd);
+    /*background:#145374*/
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.card .details__card .center {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card .p__title {
+    font-weight: 900;
+}
+
+.card:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);
+    /*100%*/
+}
+
+.card:hover .details__card {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.card__busqueda {
+    width: 17.2rem;
+}
+
+.card__busqueda .center {
+    width: 100%;
+}
+
+.card__center--width .center {
+    width: 100%;
+}
+
+#card__one--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__two--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__three--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__four--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__five--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__six--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__seven--color {
+    background-color: #145374;
+    border: 0;
+}
+
+#card__eight--color {
+    background-color: #145374;
+    border: 0;
+}
+
+.container__contacto {
+    margin: 0%;
+}
+
+#contacto__area {
+    padding-top: 10%;
+    text-align: center;
+}
+
+#contacto__area p {
+    color: black;
+}
+
+.store__location--center {
+    text-align: center;
+}
+
+.store__location--center label {
+    font-weight: bold;
+}
+
+
+/* estilo boton cards*/
+
+.blue__button {
+    border: solid;
+    background-color: #145374;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.title__section {
+    text-align: center;
+}
+
+.word__button {
+    color: white;
+}
+
+.row__orden {
+    justify-content: space-around;
+}
+
+.title__image--center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title__image--style {
+    font-size: 7vw;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+.pagos__logo--tamano {
+    width: 12rem;
+}
+
+.cart__logo--tamano {
+    width: 1.8rem;
+}
+
+#listaCarrito {
+    right: 0;
+    left: auto;
+    position: absolute;
+    width: 200px;
+}
+
+#listaCarrito p {
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.badge {
+    position: relative;
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #ffa500;
+    color: white;
+    font-family: "Poiret One", cursive;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+.emptyCart {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#emptyCartBtn {
+    margin: 0;
+    display: block;
+}
+
+#listadoCarrito {
+    margin: 50px;
+}
+
+#listadoCarrito .tituloProducto {
+    display: flex;
+    text-align: center;
+    align-center: center;
+    flex-direction: column;
+}
+
+.cart-page {
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-img {
+    display: flex;
+    justify-content: center;
+}
+
+.listadoProductos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#lblShoppingCart {
+    margin-left: 20px;
+}
+
+#msg {
+    width-min: 200px;
+    border-radius: 5px;
+    color: #E8E8E8;
+}
+
+.center__input {
+    text-align: center;
+}
+
+#botonComprar {
+    background-color: #32CD32;
+    margin-left: 10px;
+    border-color: #32CD32;
+}
+
+#botonComprar a {
+    color: white;
+    text-decoration: none;
+}
+
+#botonComprar:hover:enabled {
+    background-color: #006400;
+}
+
+#contBotones {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-item:hover .navbar__sublist {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar__logo--tamano {
+        width: 90px;
+        height: 90px;
+    }
+    .title__image--style {
+        font-size: 7vw;
+        -webkit-text-stroke: 1px black;
+    }
+}
+
+@media (max-width: 769px) {
+    .main__imagenes--display {
+        float: left;
+        width: 100%;
+    }
+    .row__orden {
+        justify-content: space-around;
+    }
+    .footerMain__list ul {
+        margin: auto;
+        width: 70%;
+        padding: 0;
+    }
+    .title__image--style {
+        font-size: 9vw;
+    }
+    .container__contacto {
+        margin-bottom: 25px;
+    }
+    .cart-info p {
+        display: none;
+    }
+}
+
+@keyframes fading {
+    0% {
+        opacity: 25%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 25%;
+    }
+}
