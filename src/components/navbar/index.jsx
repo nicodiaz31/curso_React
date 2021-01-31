@@ -1,7 +1,9 @@
-import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import ShoppingCart from '../shoppingcart';
 
-function Navbar() {
+function Navbar(props) {
+	console.log(props.numberArticles);
     return ( 
         <>
            <nav className="navbar navbar-expand-lg navbar__background--color navbar-dark">
@@ -42,8 +44,7 @@ function Navbar() {
 								<a className="nav-link" href="busqueda.html">Busqueda</a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="shoppingcart.html"><img className="cart__logo--tamano" src="/images/shoppingcart.png" alt="shoppingcart"/>
-								<span className='badge badge-warning' id='lblCartCount'/></a>
+								<ShoppingCart numberArticles={props.numberArticles}/>
 							</li>
 						</ul>
 					</div>

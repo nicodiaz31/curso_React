@@ -1,14 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/navbar/';
+import ItemListContainerComponent from './components/itemlistcontainer';
 
-let estilos = {color:'violet'};
+let numberArticles = 3;
 
 function App() {
+
   return (
     <>
-      <NavbarComponent/>
+      <NavbarComponent numberArticles={numberArticles}/>
+      <ItemListContainerComponent/> 
     </>
   );
 }

@@ -576,7 +576,7 @@ a {
 #listadoCarrito .tituloProducto {
     display: flex;
     text-align: center;
-    align-center: center;
+    align-content: center;
     flex-direction: column;
 }
 
@@ -605,7 +605,7 @@ a {
 }
 
 #msg {
-    width-min: 200px;
+    min-width: 200px;
     border-radius: 5px;
     color: #E8E8E8;
 }
