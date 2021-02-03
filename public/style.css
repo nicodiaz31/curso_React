@@ -634,6 +634,10 @@ a {
     justify-content: center;
 }
 
+.quantity__input {
+    text-align: center;
+}
+
 @media screen and (min-width: 900px) {
     .nav-item:hover .navbar__sublist {
         display: block;

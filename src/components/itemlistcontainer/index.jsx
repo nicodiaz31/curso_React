@@ -1,7 +1,14 @@
+import ItemCountContainer from "../itemcount";
+
 function ItemListContainer(){
+    let stock = 9;
+
+    const initialValue = stock > 0 ? 1 : 0;
+
     return (
-        <>
-            Lista de Articulos
+        <>  
+            <p>Cantidad Disponible: { stock }</p>
+            <ItemCountContainer stock={ stock } initialValue={ initialValue }/>  
         </>
     );
 }
