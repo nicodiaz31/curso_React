@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ItemCountContainer = (props) => {
+const ItemCountComponent = (props) => {
     const [count, setCount] = useState(props.initialValue);
 
     const onAdd = () => {
@@ -32,4 +32,4 @@ const ItemCountContainer = (props) => {
     )
 } 
 
-export default ItemCountContainer;
+export default ItemCountComponent;

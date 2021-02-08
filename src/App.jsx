@@ -1,7 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/navbar/';
-import ItemListContainerComponent from './components/itemlistcontainer';
+import ItemListContainerComponent from './containers/itemlistcontainer';
+import ItemDetailContainer from './containers/itemdetailcontainer';
 
 let numberArticles = 3;
 
