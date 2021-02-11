@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ItemDetailContainer from '../../containers/itemdetailcontainer';
 
 const ItemCountComponent = (props) => {
     const [count, setCount] = useState(props.initialValue);
@@ -28,6 +29,7 @@ const ItemCountComponent = (props) => {
                     onAdd()
                 }> + </button>
             </div>
+            <ItemDetailContainer/>
         </>
     )
 } 

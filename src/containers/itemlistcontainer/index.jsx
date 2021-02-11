@@ -8,7 +8,7 @@ function ItemListContainer(){
 
     return (
         <>  
-            <div class="row row__orden">
+            <div className="row row__orden">
                 <ItemListComponent/>    
             </div>
             <p>Cantidad Disponible: { stock }</p>

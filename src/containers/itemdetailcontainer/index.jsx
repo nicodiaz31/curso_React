@@ -1,31 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ItemDetailComponent from '../../components/itemdetail';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = (props) => {
 
-    const [items, setItems] = useState([]);
-
-    useEffect(() => {
-
-        async function getItems(){
-            await fetch('articles.json')
-                    .then(result =>{
-                        return result.json()
-                    })
-                    .then(value => {
-                        setItems(value);
-                    })
-
-        } 
-        
-        getItems();
-
-    }, [])
-
-
+    const showDetail = props.showDetail;
+    
+    const item = props.item;
+    
     return (
-        <>
-            <ItemDetailComponent items={items}/>
+        <>  
+           {showDetail ? <ItemDetailComponent item={item} setShowDetail={props.setShowDetail}/> : null}
         </>
     )
 }

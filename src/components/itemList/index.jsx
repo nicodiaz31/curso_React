@@ -23,7 +23,7 @@ const ItemListComponent = () => {
         <>
                 {
                     items.map(item => (
-                        <ItemComponent item={item}/>
+                        <ItemComponent item={item} key={item.id}/>
                     ))
                 }
         </>
