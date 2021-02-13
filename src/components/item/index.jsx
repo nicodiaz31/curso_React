@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import ItemDetailContainer from '../../containers/itemdetailcontainer';
+import React from 'react';
+//import ItemDetailContainer from '../../containers/itemdetailcontainer';
 
 const ItemComponent = (props) => {
 
-    const [showDetail, setShowDetail] = useState(false);
+    //const [showDetail, setShowDetail] = useState(false);
     const item = props.item;
 
-    const showModal = () => {
-        setShowDetail(prev => !prev)
-        console.log(showDetail);
+    const onClick = () => {
+        props.getItemId(item.id)
+        props.onClick();
     }
 
     return (
@@ -22,12 +22,11 @@ const ItemComponent = (props) => {
                         <div className="center">
                             <p className="p__title">{item.marca} {item.modelo}</p>
                             <p>Precio: ARS ${item.precio}</p>
-                            <button className="btn blue__button mt-auto" onClick={showModal}>Ver Artículo</button>
+                            <button className="btn blue__button mt-auto" onClick={onClick}>Ver Artículo</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <ItemDetailContainer item={item} showDetail={showDetail} setShowDetail={setShowDetail}/>
         </>
     )
 }

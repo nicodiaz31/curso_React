@@ -7,7 +7,7 @@ const ItemDetailComponent = (props) => {
             <div className='modal'>
                 <div className='modal-content'> 
                     <span className="close" onClick={() =>
-                        props.setShowDetail(prev => !prev)
+                        props.setShowDetails(prev => !prev)
                     }>&times;</span>
                     <span>{props.item.marca}</span>
                     <span>{props.item.modelo}</span>
