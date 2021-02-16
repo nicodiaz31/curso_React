@@ -5,7 +5,7 @@
 		"modelo": "PR5",
 		"tipo": "guitarra",
 		"precio": 38999.99,
-		"imagen": "/images/epiphone_pr5.jpg",
+		"imagen": "images/epiphone_pr5.jpg",
 		"descuento": false,
 		"destacado": false,
 		"novedades": false
@@ -16,7 +16,7 @@
 		"modelo": "Wildkat",
 		"tipo": "guitarra",
 		"precio": 69999.99,
-		"imagen": "images/epiphone_wildkat_3.jpg",
+		"imagen": "images/epiphone_wildkat.jpg",
 		"descuento": false,
 		"destacado": false,
 		"novedades": false

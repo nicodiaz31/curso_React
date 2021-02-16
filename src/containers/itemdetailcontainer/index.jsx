@@ -1,20 +1,23 @@
 import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetailComponent from '../../components/itemdetail';
 
 const ItemDetailContainer = (props) => {
-
-    const itemId = props.itemId;
+    
+    
+    const {itemId} = useParams();
+    console.log(itemId)
     const [item, setItem] = useState();
 
     useEffect(() =>{
         setTimeout(() => {
-            fetch('articles.json')
+            fetch('/articles.json')
                 .then(result => {
                     return result.json()
                 })
                 .then(value => {
                     value.forEach(element => {
-                        if(element.id === itemId){
+                        if(element.id === parseInt(itemId)){
                             setItem(element)
                         }
                     })
@@ -25,7 +28,7 @@ const ItemDetailContainer = (props) => {
 
     return(
         <>
-        {item ? <ItemDetailComponent itemId={itemId} setShowDetails={props.setShowDetails} item={item}/> : null}
+        {item ? <ItemDetailComponent setShowDetails={props.setShowDetails} item={item}/> : null}
         </>
     )
 }

@@ -12,6 +12,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    font-family: "Poiret One", cursive;
 }
 
 body header {
@@ -496,6 +497,7 @@ a {
 
 .row__orden {
     justify-content: space-around;
+    margin-bottom: 15px;
 }
 
 .title__image--center {

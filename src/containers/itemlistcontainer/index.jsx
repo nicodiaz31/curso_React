@@ -1,18 +1,19 @@
-import ItemCountComponent from "../../components/itemcount";
 import ItemListComponent from "../../components/itemList";
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer(){
-    let stock = 9;
+    const {categoryName} = useParams();
+    console.log(categoryName.slice(0,-1));
+    
 
-    const initialValue = stock > 0 ? 1 : 0;
 
     return (
         <>  
+
             <div className="row row__orden">
-                <ItemListComponent/>    
+                {categoryName ? <ItemListComponent categoryName={categoryName}/> : null}   
             </div>
-            <p>Cantidad Disponible: { stock }</p>
-            <ItemCountComponent stock={ stock } initialValue={ initialValue }/>  
+             
         </>
     );
 }

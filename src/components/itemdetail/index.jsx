@@ -1,6 +1,10 @@
 import React from 'react';
+import ItemCountComponent from "../itemcount";
 
 const ItemDetailComponent = (props) => {
+
+    let stock = 9;
+    const initialValue = stock > 0 ? 1 : 0;
 
     return (
         <>
@@ -15,6 +19,8 @@ const ItemDetailComponent = (props) => {
                     <span>{props.item.imagen}</span>
                 </div>
             </div>
+            <p>Cantidad Disponible: { stock }</p>
+            <ItemCountComponent stock={ stock } initialValue={ initialValue }/>
         </>
     )
 }
