@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomepageComponent from './components/homepage';
 import FooterComponent from './components/footer';
 import ItemDetailContainer from './containers/itemdetailcontainer';
+import CartComponent from './components/cart';
 
 let numberArticles = 3;
 
@@ -22,8 +23,11 @@ function App() {
           <Route path="/category/:categoryName">
             <ItemListContainerComponent/> 
           </Route>
-          <Route path="category/:categoryName/item/:itemId">
+          <Route path="/item/:itemId">
             <ItemDetailContainer/> 
+          </Route>  
+          <Route path="/cart">
+            <CartComponent />
           </Route>
         </Switch>
         <FooterComponent />

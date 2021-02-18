@@ -8,6 +8,7 @@ const ItemDetailContainer = (props) => {
     const {itemId} = useParams();
     console.log(itemId)
     const [item, setItem] = useState();
+    console.log("hola " +props.showDetails)
 
     useEffect(() =>{
         setTimeout(() => {
@@ -28,7 +29,7 @@ const ItemDetailContainer = (props) => {
 
     return(
         <>
-        {item ? <ItemDetailComponent setShowDetails={props.setShowDetails} item={item}/> : null}
+        {item ? props.showDetails ? <ItemDetailComponent setShowDetails={props.setShowDetails} item={item}/> : <ItemDetailComponent showDetails={props.showDetails} item={item}/> : null}
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ItemCountComponent = (props) => {
-    const [count, setCount] = useState(props.initialValue);
+    const [count, setCount] = useState(props.quantity);
 
     const onAdd = () => {
         if (count < props.stock) {
@@ -16,17 +16,19 @@ const ItemCountComponent = (props) => {
             setCount(quantity);
         }
     }
+
+    const onClick = () =>{
+        props.onAdd(count)
+    }
     
     return (
         <>
-            <div>
-                <button className="btn btn-primary" onClick={ () =>
-                    onSubstrain()
-                }> - </button>
+            <div className="modal-body row">
+                <p>Cantidad Disponible: { props.stock }</p>
+                <button className="btn btn-primary" onClick={onSubstrain}> - </button>
                 <input value={ count } disabled className="quantity__input"/>
-                <button className="btn btn-primary" onClick={ ()=>
-                    onAdd()
-                }> + </button>
+                <button className="btn btn-primary" onClick={onAdd}> + </button>
+                <button className="btn blue__button mt-auto" onClick={onClick}> Agregar al carrito</button>
             </div>
         </>
     )

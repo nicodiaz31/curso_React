@@ -495,9 +495,14 @@ a {
     color: white;
 }
 
+.modal-body {
+    margin: 15px;
+}
+
 .row__orden {
     justify-content: space-around;
-    margin-bottom: 15px;
+    margin: 15px;
+    margin-bottom: 20px;
 }
 
 .title__image--center {

@@ -10,7 +10,6 @@ const ItemComponent = (props) => {
 
     const onClick = () => {
         props.getItemId(item.id)
-        
         props.onClick();
     }
 
@@ -29,7 +28,7 @@ const ItemComponent = (props) => {
                         <div className="center">
                             <p className="p__title">{item.marca} {item.modelo}</p>
                             <p>Precio: ARS ${item.precio}</p>
-                            <button className="btn blue__button mt-auto" onClick={onClick}><NavLink to={`/category/guitarras/item/${item.id}`}>Ver Artículo</NavLink></button>
+                            <button className="btn blue__button mt-auto" onClick={onClick}><NavLink to={`/item/${item.id}`} onClick={onClick}>Ver Artículo</NavLink></button>
                         </div>
                     </div>
                 </div>

@@ -37,7 +37,9 @@ const ItemListComponent = (props) => {
     }, [categoryName])
 
     const showModal = () => {
-        setShowDetails(true)
+        console.log(showDetails)
+        setShowDetails(prev => !prev)
+        console.log(showDetails)
     }
 
     const getItemId = (itId) => {
