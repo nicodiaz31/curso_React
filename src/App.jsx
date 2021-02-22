@@ -7,6 +7,8 @@ import HomepageComponent from './components/homepage';
 import FooterComponent from './components/footer';
 import ItemDetailContainer from './containers/itemdetailcontainer';
 import CartComponent from './components/cart';
+import { GlobalContext } from './context/GlobalContext';
+import { CartContext} from './context/CartContext';
 
 let numberArticles = 3;
 
@@ -14,24 +16,28 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <NavbarComponent numberArticles={numberArticles}/>
-        <Switch>
-          <Route exact path="/">
-            <HomepageComponent/>
-          </Route>
-          <Route path="/category/:categoryName">
-            <ItemListContainerComponent/> 
-          </Route>
-          <Route path="/item/:itemId">
-            <ItemDetailContainer/> 
-          </Route>  
-          <Route path="/cart">
-            <CartComponent />
-          </Route>
-        </Switch>
-        <FooterComponent />
-      </BrowserRouter>
+      <GlobalContext.Provider>
+        <CartContext.Provider value={[]}>
+        <BrowserRouter>
+          <NavbarComponent numberArticles={numberArticles}/>
+          <Switch>
+            <Route exact path="/">
+              <HomepageComponent/>
+            </Route>
+            <Route path="/category/:categoryName">
+              <ItemListContainerComponent/> 
+            </Route>
+            <Route path="/item/:itemId">
+              <ItemDetailContainer/> 
+            </Route>  
+            <Route path="/cart">
+              <CartComponent />
+            </Route>
+          </Switch>
+          <FooterComponent />
+        </BrowserRouter>
+        </CartContext.Provider>
+      </GlobalContext.Provider>
     </>
   );
 }

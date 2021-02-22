@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ItemDetailContainer from '../../containers/itemdetailcontainer';
+import { CartContext } from '../../context/CartContext';
 import ItemComponent from '../item';
 
 const ItemListComponent = (props) => {
@@ -8,6 +9,8 @@ const ItemListComponent = (props) => {
     const [items, setItems] = useState([]);
     const [showDetails, setShowDetails] = useState(false);
     const [itemId, setItemId] = useState();
+    const cartContext = useContext(CartContext);
+    console.log(cartContext);
 
     useEffect(() =>{
         if (categoryName === 'guitarras' || categoryName === 'bajos'){
