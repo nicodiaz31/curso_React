@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FooterComponent = () => {
     return(
@@ -8,35 +9,35 @@ const FooterComponent = () => {
                     <div className="footerMain__lists--display row">
                         <div className="footerMain__list col-md-3 mx-auto">
                             <ul>
-                                <li><a className="footerMain__list--title" href="instrumentos.html">Instrumentos</a></li>
-                                <li><a href="guitarras.html">Guitarras</a></li>
-                                <li><a href="bajos.html">Bajos</a></li>
+                                <li><Link className="footerMain__list--title" to={`/instrumentos`}>Instrumentos</Link></li>
+                                <li><Link to={`/category/guitarras`}>Guitarras</Link></li>
+                                <li><Link to={`/category/bajos`}>Bajos</Link></li>
                             </ul>
                         </div>
                         <hr className="clearfix w-100 d-md-none"/>
                         <div className="footerMain__list col-md-3 mx-auto">
                             <ul>
-                                <li><a className="footerMain__list--title" href="accesorios.html">Accesorios</a></li>
-                                <li><a href="amplificadores.html">Amplificadores</a></li>
-                                <li><a href="auriculares.html">Auriculares</a></li>
+                                <li><Link className="footerMain__list--title" to={`/accesorios`}>Accesorios</Link></li>
+                                <li><Link to={`/category/amplificadores`}>Amplificadores</Link></li>
+                                <li><Link to={`/category/auriculares`}>Auriculares</Link></li>
                             </ul>
                         </div>
                         <hr className="clearfix w-100 d-md-none"/>
                         <div className="footerMain__list col-md-3 mx-auto">
                             <ul>
-                                <li><a className="footerMain__list--title" href="promociones.html">Promociones</a></li>
-                                <li><a href="descuentos.html">Descuentos</a></li>
-                                <li><a href="promociones_bancarias.html">Promociones Bancarias</a></li>
+                                <li><Link className="footerMain__list--title" to={`/promociones`}>Promociones</Link></li>
+                                <li><Link to={`/category/descuentos`}>Descuentos</Link></li>
+                                <li><Link to={`/promociones/promociones_bancarias`}>Promociones Bancarias</Link></li>
                             </ul>
                         </div>
                         <hr className="clearfix w-100 d-md-none"/>
                         <div className="footerMain__list col-md-3 mx-auto">
                             <ul>
-                                <li><a className="footerMain__list--title" href="contacto.html">Contacto</a></li>
-                                <li><a href="contacto.html">Escríbenos</a></li>
-                                <li><img className="footerMain__logo--tamano" src="/images/fbLogo.png" alt="logoFb"/><a href="https://facebook.com/tiendaMusica">@tiendaMusica</a></li>
-                                <li><img className="footerMain__logo--tamano" src="/images/igLogo.png" alt="logoIg"/><a href="https://instagram.com/tiendaMusica">@tiendaMusica</a></li>
-                                <li><img className="footerMain__logo--tamano" src="/images/twLogo.png" alt="logoTw"/><a href="https://twitter.com/tiendaMusica">@tiendaMusica</a></li>
+                                <li><Link className="footerMain__list--title" to={`/contacto`}>Contacto</Link></li>
+                                <li><Link to={`/contacto`}>Escríbenos</Link></li>
+                                <li><img className="footerMain__logo--tamano" src="/images/fbLogo.png" alt="logoFb"/><Link to={"https://facebook.com/tiendaMusica"}>@tiendaMusica</Link></li>
+                                <li><img className="footerMain__logo--tamano" src="/images/igLogo.png" alt="logoIg"/><Link to={"https://instagram.com/tiendaMusica"}>@tiendaMusica</Link></li>
+                                <li><img className="footerMain__logo--tamano" src="/images/twLogo.png" alt="logoTw"/><Link to={"https://twitter.com/tiendaMusica"}>@tiendaMusica</Link></li>
                             </ul>
                         </div>
                     </div>

@@ -456,7 +456,11 @@ a {
 }
 
 .container__contacto {
-    margin: 0%;
+    width: 100%; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
 }
 
 #contacto__area {
@@ -518,6 +522,10 @@ a {
     -webkit-text-stroke: 2px black;
     color: white;
     font-family: "Raleway", sans-serif;
+}
+
+.contacto__formulario {
+    margin-left: 25px;
 }
 
 .pagos__logo--tamano {

@@ -9,6 +9,7 @@ import ItemDetailContainer from './containers/itemdetailcontainer';
 import CartComponent from './components/cart';
 import { GlobalContext } from './context/GlobalContext';
 import { CartContext} from './context/CartContext';
+import ContactComponent from './components/contact';
 
 let numberArticles = 3;
 
@@ -32,6 +33,9 @@ function App() {
             </Route>  
             <Route path="/cart">
               <CartComponent />
+            </Route>
+            <Route path="/contacto">
+              <ContactComponent/>
             </Route>
           </Switch>
           <FooterComponent />
