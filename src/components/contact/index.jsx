@@ -1,10 +1,6 @@
 import React from 'react';
 
 const ContactComponent = () => {
-    const fontStyle = {
-        fontWeight: 900
-    };
-
     return(
         <>
             <div className="container container__contacto">
