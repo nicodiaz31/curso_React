@@ -58,7 +58,7 @@ function ItemListContainer(){
         <>  
 
             <div className="row row__orden">
-                {categoryName ? <ItemListComponent categoryName={categoryList} loading={loading} items={items}/> : null}   
+                {categoryName ? <ItemListComponent categoryList={categoryList} loading={loading} items={items} categoryName={categoryName}/> : null}   
             </div>
              
         </>

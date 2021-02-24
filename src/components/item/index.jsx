@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //import ItemDetailContainer from '../../containers/itemdetailcontainer';
 
 const ItemComponent = (props) => {
@@ -28,7 +28,7 @@ const ItemComponent = (props) => {
                         <div className="center">
                             <p className="p__title">{item.marca} {item.modelo}</p>
                             <p>Precio: ARS ${item.precio}</p>
-                            <button className="btn blue__button mt-auto" onClick={onClick}><NavLink to={`/item/${item.id}`} onClick={onClick}>Ver Artículo</NavLink></button>
+                            <Link to={`/item/${item.id}`} onClick={onClick} className="btn blue__button mt-auto">Ver Artículo</Link>
                         </div>
                     </div>
                 </div>

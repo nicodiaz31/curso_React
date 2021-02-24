@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
 const ItemCountComponent = (props) => {
-    const [count, setCount] = useState(props.quantity);
+    const [count, setCount] = useState(1);
+    //const [disable, setDisable] = useState(true)
+
+  
 
     const onAdd = () => {
         if (count < props.stock) {
@@ -20,15 +23,25 @@ const ItemCountComponent = (props) => {
     const onClick = () =>{
         props.onAdd(count)
     }
+
     
     return (
         <>
-            <div className="modal-body row">
-                <p>Cantidad Disponible: { props.stock }</p>
-                <button className="btn btn-primary" onClick={onSubstrain}> - </button>
-                <input value={ count } disabled className="quantity__input"/>
-                <button className="btn btn-primary" onClick={onAdd}> + </button>
-                <button className="btn blue__button mt-auto" onClick={onClick}> Agregar al carrito</button>
+            <div>
+                <div className="row" style={{fontWeight:900, marginLeft:0}}>
+                    <h5>Cantidad Disponible:</h5>
+                    <h5 style={{fontWeight:'bold', marginLeft:5}}>{ props.stock }</h5>
+                </div>
+                <button className="btn btn-default btn-number" onClick={onSubstrain}> - </button>
+                <input value={ count } disabled className="input-number quantity__input"/>
+                <button className="btn btn-default btn-number" onClick={onAdd}> + </button>
+                {
+                    count > 0 ? 
+                        <button className="btn blue__button mt-auto btn__item--detail" onClick={onClick}> Agregar al carrito</button>
+                        :
+                        null
+                }
+                
             </div>
         </>
     )

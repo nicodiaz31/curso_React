@@ -8,8 +8,9 @@
 		"imagen": "images/epiphone_pr5.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 5 
+},
 	{
 		"id": 2,
 		"marca": "Epiphone",
@@ -19,8 +20,9 @@
 		"imagen": "images/epiphone_wildkat.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 3 
+},
 	{
 		"id": 3,
 		"marca": "Fender",
@@ -30,8 +32,9 @@
 		"imagen": "images/fender_stratocaster_chrome.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 2 
+},
 	{
 		"id": 4,
 		"marca": "Epiphone",
@@ -41,8 +44,9 @@
 		"imagen": "images/epiphone_339_2.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 6 
+},
 	{
 		"id": 5,
 		"marca": "Epiphone",
@@ -52,8 +56,9 @@
 		"imagen": "images/epiphone_lp_sp2.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 12 
+},
 	{
 		"id": 6,
 		"marca": "Epiphone",
@@ -63,8 +68,9 @@
 		"imagen": "images/epiphone_335.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 8
+},
 	{
 		"id": 7,
 		"marca": "Fender",
@@ -74,8 +80,9 @@
 		"imagen": "images/fender_telecaster.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 3 
+},
 	{
 		"id": 8,
 		"marca": "Epiphone",
@@ -85,8 +92,9 @@
 		"imagen": "images/epiphone_toby_dx_iv.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 4 
+},
 	{
 		"id": 9,
 		"marca": "Epiphone",
@@ -96,8 +104,9 @@
 		"imagen": "images/epiphone_jack_casady.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 2 
+},
 	{
 		"id": 10,
 		"marca": "Squier",
@@ -107,8 +116,9 @@
 		"imagen": "images/squier_jazz_bass.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 8 
+},
 	{
 		"id": 11,
 		"marca": "Gibson",
@@ -118,8 +128,9 @@
 		"imagen": "images/gibson_explorer_bass.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 3 
+},
 	{
 		"id": 12,
 		"marca": "Peavy",
@@ -129,8 +140,9 @@
 		"imagen": "images/amplificador_bajo_peavy_max_115.png",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 6 
+},
 	{
 		"id": 13,
 		"marca": "Vox",
@@ -140,8 +152,9 @@
 		"imagen": "images/amplificador_vox_vt40.png",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 4 
+},
 	{
 		"id": 14,
 		"marca": "Orange",
@@ -151,8 +164,9 @@
 		"imagen": "images/amplificador_orange_crush_20.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 12
+},
 	{
 		"id": 15,
 		"marca": "Fender",
@@ -162,8 +176,9 @@
 		"imagen": "images/amplificador_fender_champion_100.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 9
+},
 	{
 		"id": 16,
 		"marca": "Acoustic",
@@ -173,8 +188,9 @@
 		"imagen": "images/amplificador_acoustic_a40.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 6
+},
 	{
 		"id": 17,
 		"marca": "Sony",
@@ -184,8 +200,9 @@
 		"imagen": "images/auriculares_sony_1000xm3.png",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 9 
+},
 	{
 		"id": 18,
 		"marca": "Sony",
@@ -195,8 +212,9 @@
 		"imagen": "images/auriculares_sony_xm4.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 9
+},
 	{
 		"id": 19,
 		"marca": "AKG",
@@ -206,8 +224,9 @@
 		"imagen": "images/auriculares_akg_k141.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 10
+},
 	{
 		"id": 20,
 		"marca": "Sony",
@@ -217,8 +236,9 @@
 		"imagen": "images/auriculares_sony_sp800.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 19
+},
 	{
 		"id": 21,
 		"marca": "Sony",
@@ -228,8 +248,9 @@
 		"imagen": "images/auriculares_sony_xb700.jpeg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 15
+},
 	{
 		"id": 22,
 		"marca": "Gretsch",
@@ -239,8 +260,9 @@
 		"imagen": "images/gretsch_electromatic.png",
 		"descuento": false,
 		"destacado": false,
-		"novedades": true
-	},
+		"novedades": true,
+	    "stock": 2 
+},
 	{
 		"id": 23,
 		"marca": "Gibson",
@@ -250,8 +272,9 @@
 		"imagen": "images/gibson_firebird.png",
 		"descuento": false,
 		"destacado": false,
-		"novedades": true
-	},
+		"novedades": true,
+	    "stock": 1
+},
 	{
 		"id": 24,
 		"marca": "Gibson",
@@ -261,8 +284,9 @@
 		"imagen": "images/gibson_midtown_standard.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": true
-	},
+		"novedades": true,
+	    "stock": 4
+},
 	{
 		"id": 25,
 		"marca": "Gibson",
@@ -272,8 +296,9 @@
 		"imagen": "images/gibson_lp_standard.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": true
-	},
+		"novedades": true,
+	    "stock": 3
+},
 	{
 		"id": 26,
 		"marca": "Washburn",
@@ -283,8 +308,9 @@
 		"imagen": "images/washburn_pxv.jpg",
 		"descuento": false,
 		"destacado": false,
-		"novedades": true
-	},
+		"novedades": true,
+	    "stock": 2 
+},
 	{
 		"id": 27,
 		"marca": "Gibson",
@@ -294,8 +320,9 @@
 		"imagen": "images/gibson_bajo_lp.jpg",
 		"descuento": false,
 		"destacado": true,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 2
+},
 	{
 		"id": 28,
 		"marca": "Gibson",
@@ -305,8 +332,9 @@
 		"imagen": "images/gibson_memphis_bigsby.jpg",
 		"descuento": false,
 		"destacado": true,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 1 
+},
 	{
 		"id": 29,
 		"marca": "Gibson",
@@ -316,8 +344,9 @@
 		"imagen": "images/gibson_lp_custom.png",
 		"descuento": false,
 		"destacado": true,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 2 
+},
 	{
 		"id": 30,
 		"marca": "Roland",
@@ -327,8 +356,9 @@
 		"imagen": "images/amplificador_roland_cube_40.jpg",
 		"descuento": true,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 9 
+},
 	{
 		"id": 31,
 		"marca": "Squier",
@@ -338,8 +368,9 @@
 		"imagen": "images/squier_stratocaster.jpg",
 		"descuento": true,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 14
+},
 	{
 		"id": 32,
 		"marca": "Skullcandy",
@@ -349,8 +380,9 @@
 		"imagen": "images/auriculares_skullcandy_hesh_3.jpg",
 		"descuento": true,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 13
+},
 	{
 		"id": 33,
 		"marca": "Epiphone",
@@ -360,8 +392,9 @@
 		"imagen": "images/epiphone_lp_sp2_sunburst.jpg",
 		"descuento": true,
 		"destacado": false,
-		"novedades": false
-	},
+		"novedades": false,
+	    "stock": 18
+},
 	{
 		"id": 34,
 		"marca": "Squier",
@@ -371,7 +404,8 @@
 		"imagen": "images/squier_mini_precision.jpg",
 		"descuento": true,
 		"destacado": false,
-		"novedades": false
+		"novedades": false,
+		"stock": 4
 	}
 
 ]

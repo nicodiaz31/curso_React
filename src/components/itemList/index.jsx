@@ -4,7 +4,7 @@ import ItemDetailContainer from '../../containers/itemdetailcontainer';
 import ItemComponent from '../item';
 
 const ItemListComponent = (props) => {
-    const categoryName = props.categoryName
+    const categoryName = props.categoryName.charAt(0).toUpperCase() + props.categoryName.slice(1)
     const items = props.items;
     const [showDetails, setShowDetails] = useState(false);
     const [itemId, setItemId] = useState();
@@ -22,23 +22,38 @@ const ItemListComponent = (props) => {
     const getItemId = (itId) => {
         setItemId(itId)
     }
-
+  
     return (
         <>
-            {
-                props.loading ?  
-                items.map(item => (
-                    <ItemComponent item={item} key={item.id} onClick={showModal} getItemId={getItemId} categoryName={categoryName}/>
-                )) 
-                :
-                <div className="spinner-border" role="status" style={{marginBottom: 15}}>
-                    <span className="sr-only">Loading...</span>
+            <div className="submain container-fluid px-0">
+                <div className="row">
+                    <div className="title__section container-fluid">   
+                        <h4>{categoryName}</h4>  
+                    </div>
                 </div>
-            }
-            {
-                showDetails ? <ItemDetailContainer showDetails={showDetails} itemId={itemId} setShowDetails={setShowDetails}/> : null
-            
-            }
+                <hr className="hr__personalized"/>
+                <div className="modal-body row"> 
+                    <div className="col-md-12">
+                        <div className="row row__orden">
+                {   
+                    
+                    props.loading ?  
+                    items.map(item => (
+                        <ItemComponent item={item} key={item.id} onClick={showModal} getItemId={getItemId}/>
+                    )) 
+                    :
+                    <div className="spinner-border" role="status" style={{marginBottom: 15}}>
+                        <span className="sr-only">Loading...</span>
+                    </div>
+                }
+                {
+                    showDetails ? <ItemDetailContainer showDetails={showDetails} itemId={itemId} setShowDetails={setShowDetails}/> : null
+                
+                }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

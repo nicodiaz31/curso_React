@@ -4,7 +4,7 @@ import ItemDetailComponent from '../../components/itemdetail';
 
 const ItemDetailContainer = (props) => {
     
-    
+    const [loading, setLoading] = useState(true)
     const {itemId} = useParams();
     console.log(itemId)
     const [item, setItem] = useState();
@@ -20,6 +20,7 @@ const ItemDetailContainer = (props) => {
                     value.forEach(element => {
                         if(element.id === parseInt(itemId)){
                             setItem(element)
+                            setLoading(false)
                         }
                     })
                 })
@@ -29,7 +30,26 @@ const ItemDetailContainer = (props) => {
 
     return(
         <>
-        {item ? props.showDetails ? <ItemDetailComponent setShowDetails={props.setShowDetails} item={item}/> : <ItemDetailComponent showDetails={props.showDetails} item={item}/> : null}
+            <div className="submain container-fluid px-0">
+                <div className="modal-body row"> 
+                    <div className="col-md-12">
+                        <div className="row row__orden">
+                            {loading ? 
+                                <div className="spinner-border" role="status" style={{marginBottom: 15}}>
+                                    <span className="sr-only">Loading...</span>
+                                </div> 
+                                : 
+                                item ? 
+                                    props.showDetails ? 
+                                        <ItemDetailComponent setShowDetails={props.setShowDetails} item={item}/> 
+                                        : 
+                                        <ItemDetailComponent showDetails={props.showDetails} item={item}/> 
+                                    : null
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

@@ -651,6 +651,7 @@ a {
 
 .quantity__input {
     text-align: center;
+    width: 50px;
 }
 
 .modal {
@@ -673,6 +674,23 @@ a {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+.img__detail--view{
+    zoom: 50%
+}
+
+.img__detail--viewAlt{
+    zoom: 50%
+}
+
+.btn__item--detail{
+    color: white;
+}
+
+.btn__item--detail:hover{
+    color: white;
+    background-color: #02B09B;
 }
 
 /* The Close Button */
