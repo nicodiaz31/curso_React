@@ -4,10 +4,7 @@ import { CartContext } from '../../context/CartContext';
 const CartComponent = () => {
 
     const {cart, removeItem, clear } = useContext(CartContext)
-
-    const removeOnClick = () =>{
-        removeItem(cart.item.id)
-    }
+    let total = 0;
 
     useEffect(()=>{
         return () => {};
@@ -39,8 +36,7 @@ const CartComponent = () => {
                             <tbody>
                                 {
                                     cart.map(producto => {
-                                        
-                                       return <tr className="torta" key={producto.item.id}>
+                                        return <tr className="torta" key={producto.item.id}>
                                             <td>
                                                 <div className="cart-info">
                                                     <div className="div-img" style={{width:130, minWidth:130, maxHeight:130}}>
@@ -49,7 +45,9 @@ const CartComponent = () => {
                                                     <div>
                                                         <p>{producto.item.marca} {producto.item.modelo}</p>
                                                         <small>Precio: ${producto.item.precio}</small>
-                                                        <button className="remove-option" onClick={removeOnClick}>Eliminar</button>
+                                                        <button className="remove-option" onClick={remove => {
+                                                            removeItem(producto.item.id)
+                                                        }}>Eliminar</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -58,6 +56,7 @@ const CartComponent = () => {
                                             </td>
                                             <td>{(producto.item.precio * producto.quantity).toFixed(2)}</td>
                                         </tr>
+                                        
                                     })
                                 }
                             </tbody>
@@ -66,7 +65,7 @@ const CartComponent = () => {
                             <table className="total-table">
                                 <tbody>
                                     <tr>
-                                        <td>Total:</td>
+                                        <td>Total: {total.toFixed(2)}</td>
                                     </tr>
                                 </tbody>
                             </table>
