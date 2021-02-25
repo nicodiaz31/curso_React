@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import ItemCountComponent from "../itemcount";
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetailComponent = (props) => {
 
+    const { addToCart } = useContext(CartContext)
     const [quantity, setQuantity] = useState(0);
     const [showButton, setShowButton] = useState(false)
-    const stock = 9;
     let clases = "img-fluid z-depth-1 img__detail--viewAlt";
 
     useEffect(()=>{
@@ -14,10 +15,9 @@ const ItemDetailComponent = (props) => {
     },[]);
 
     const onAdd = (quantity) => {
-        setQuantity(quantity);
-        console.log("cantidad: " + quantity)
-        setShowButton(true);
-        console.log(showButton)
+        setQuantity(quantity)
+        addToCart({item:props.item,quantity:quantity})
+        setShowButton(true)
     }
 
     if (props.item.tipo === "guitarra" || props.item.tipo === "bajo" || props.item.tipo === "auriculares") {
@@ -38,8 +38,8 @@ const ItemDetailComponent = (props) => {
                         <span>{props.item.imagen}</span>
                     </div>
                 </div>
-                <p>Cantidad Disponible: { stock }</p>
-                <ItemCountComponent stock={ stock } quantity={quantity} onAdd={onAdd}/>
+                <p>Cantidad Disponible: { props.item.stock }</p>
+                <ItemCountComponent stock={ props.item.stock } quantity={quantity} onAdd={onAdd}/>
             </>
         )
     } else {

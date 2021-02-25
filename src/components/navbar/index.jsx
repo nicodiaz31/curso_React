@@ -46,7 +46,8 @@ function Navbar(props) {
 								<Link className="nav-link" to={`/busqueda`}>Busqueda</Link>
 							</li>
 							<li className="nav-item">
-								<ShoppingCart numberArticles={props.numberArticles}/>
+								
+								<Link to={`/cart`}><ShoppingCart numberArticles={props.numberArticles}/></Link>
 							</li>
 						</ul>
 					</div>

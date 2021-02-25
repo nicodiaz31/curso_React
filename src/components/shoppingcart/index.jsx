@@ -1,9 +1,15 @@
-function ShoppingCart(props) {
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+
+function ShoppingCart() {
+
+    const { cart } = useContext(CartContext)
+
     return ( 
         <>
-            <a className="nav-link" href="shoppingcart.html"><img className="cart__logo--tamano" src="/images/shoppingcart.png" alt="shoppingcart"/>
-                <span className='badge badge-warning' id='lblCartCount'> {props.numberArticles}</span>
-            </a>
+            <img className="cart__logo--tamano" src="/images/shoppingcart.png" alt="shoppingcart"/>
+            <span className='badge badge-warning' id='lblCartCount'> {cart.length}</span>
+
         </>
     );
 }
