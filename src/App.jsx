@@ -10,6 +10,7 @@ import CartComponent from './components/cart';
 //import { GlobalContext } from './context/GlobalContext';
 import CartProvider from './context/CartContext';
 import ContactComponent from './components/contact';
+import SearchComponent from './components/search';
 
 let numberArticles = 3;
 
@@ -35,6 +36,9 @@ function App() {
               </Route>
               <Route path="/contacto">
                 <ContactComponent/>
+              </Route>
+              <Route path="/busqueda">
+                <SearchComponent/>
               </Route>
             </Switch>
             <FooterComponent />

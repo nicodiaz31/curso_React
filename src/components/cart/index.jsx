@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const CartComponent = () => {
 
-    const {cart, removeItem, clear } = useContext(CartContext)
-    let total = 0;
+    const {cart, removeItem, clear, total, calcTotal } = useContext(CartContext)
 
     useEffect(()=>{
         return () => {};
@@ -13,6 +13,9 @@ const CartComponent = () => {
     cart.forEach(prod => {
         console.log(prod.item.modelo)
     })
+
+    calcTotal()
+
     if (cart.length > 0){
         return(
             <>
@@ -55,8 +58,7 @@ const CartComponent = () => {
                                                 <p>{producto.quantity}</p>
                                             </td>
                                             <td>{(producto.item.precio * producto.quantity).toFixed(2)}</td>
-                                        </tr>
-                                        
+                                        </tr>  
                                     })
                                 }
                             </tbody>
@@ -81,9 +83,10 @@ const CartComponent = () => {
         )
     } else {
         return (<>
-            <div className="row" style={{ marginBottom:15 }}>
+            <div className="row" style={{ marginBottom:25 }}>
                 <div className="title__section container-fluid">   
-                    <h4>Carrito de compras vacío :)</h4>  
+                    <h4>Carrito de compras vacío :)</h4>
+                    <Link to={`/busqueda`} className="btn blue__button mt-auto" style={{color:'white'}}>Buscar Artículos</Link>  
                 </div>
             </div>
         </>)
