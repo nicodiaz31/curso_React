@@ -17,7 +17,7 @@ export const getFirebase = () => {
 }
 
 export const getFirestore = () => {
-    firebase.analytics();
+    //firebase.analytics();
     return firebase.firestore(app)
 }
   

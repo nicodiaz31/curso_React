@@ -7,17 +7,18 @@ import HomepageComponent from './components/homepage';
 import FooterComponent from './components/footer';
 import ItemDetailContainer from './containers/itemdetailcontainer';
 import CartComponent from './components/cart';
-//import { GlobalContext } from './context/GlobalContext';
 import CartProvider from './context/CartContext';
 import ContactComponent from './components/contact';
 import SearchComponent from './components/search';
+import GlobalProvider from './context/GlobalContext';
 
 let numberArticles = 3;
 
 function App() {
 
   return (
-    <>
+    <>  
+      <GlobalProvider>
         <CartProvider>
           <BrowserRouter>
             <NavbarComponent numberArticles={numberArticles}/>
@@ -44,6 +45,7 @@ function App() {
             <FooterComponent />
           </BrowserRouter>
         </CartProvider>
+      </GlobalProvider>
     </>
   );
 }

@@ -11,7 +11,7 @@ const CartComponent = () => {
     },[])
 
     cart.forEach(prod => {
-        console.log(prod.item.modelo)
+        console.log(prod.item)
     })
 
     calcTotal()
@@ -67,7 +67,7 @@ const CartComponent = () => {
                             <table className="total-table">
                                 <tbody>
                                     <tr>
-                                        <td>Total: {total.toFixed(2)}</td>
+                                        <td>Total: {total ? total.toFixed(2):""}</td>
                                     </tr>
                                 </tbody>
                             </table>

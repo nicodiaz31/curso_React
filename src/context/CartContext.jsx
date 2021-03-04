@@ -44,7 +44,6 @@ const CartProvider = ({children}) => {
 
     const calcTotal = () => {
         setTotal(cart.reduce((sum, added) => sum + added.item.precio * added.quantity,0))
-        console.log(total)
     }
 
     return(
