@@ -1,22 +1,34 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
+import PurchaseOrderComponent from '../purchaseOrder';
+import OrderComponent from '../order';
 
 const CartComponent = () => {
 
     const {cart, removeItem, clear, total, calcTotal } = useContext(CartContext)
+    const [purchaseCompleted, setPurchaseCompleted] = useState(false)
+    const [purchaseOrder, setPurchaseOrder] = useState(false)
 
     useEffect(()=>{
+        calcTotal()
         return () => {};
-    },[])
+    },[calcTotal])
 
     cart.forEach(prod => {
         console.log(prod.item)
     })
 
-    calcTotal()
+    const completeOrder = () => {
+        setPurchaseOrder(prev => !prev)
+    }
 
-    if (cart.length > 0){
+    const orderCompleted = () => {
+        setPurchaseCompleted(true)
+        clear()
+    }
+
+    if (cart.length > 0 && purchaseCompleted === false){
         return(
             <>
             <div className="row">
@@ -75,14 +87,27 @@ const CartComponent = () => {
                     </div>
                     <div id="contBotones">
                         <button className="btn btn-info" id="emptyCartBtn" style={{margin:5}} onClick={clear}>Vaciar Carrito</button>
-                        <button className="btn btn-info botonCompra" id="botonCompra" style={{margin:5}}>Comprar</button>
+                        <button className="btn btn-info botonCompra" id="botonCompra" style={{margin:5}} onClick={completeOrder}>Comprar</button>
                     </div>
                 </div>
             </div>
+            {   
+                purchaseOrder ? <PurchaseOrderComponent completeOrder={completeOrder} total={total} cart={cart} 
+                    orderCompleted={orderCompleted}/> : null 
+            }
             </>
         )
-    } else {
-        return (<>
+    } 
+    if (purchaseCompleted === true) {
+        return (
+            <>
+                <OrderComponent />
+            </>
+        )
+    }  
+    else {
+        return (
+        <>
             <div className="row" style={{ marginBottom:25 }}>
                 <div className="title__section container-fluid">   
                     <h4>Carrito de compras vacío :)</h4>
@@ -90,7 +115,7 @@ const CartComponent = () => {
                 </div>
             </div>
         </>)
-    }   
+    }
 }
 
 export default CartComponent;

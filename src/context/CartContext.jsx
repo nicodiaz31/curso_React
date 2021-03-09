@@ -7,7 +7,6 @@ const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     let exist = false
     const saludo = "hola"
-    console.log("array?"+Array.isArray(cart))
 
     const isInCart = (id) => {
         exist = cart.some(itemCart => itemCart.item.id === id)

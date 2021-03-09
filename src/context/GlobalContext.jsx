@@ -10,6 +10,7 @@ const GlobalProvider = ({children}) => {
     const [category, setCategory] = useState();
     const [searchItemId, setSearchItemId] = useState();
     const [itemFound, setItemFound] = useState();
+    const [orderNumber, setOrderNumber] = useState();
 
     useEffect(() => {
         const db = getFirestore();
@@ -37,9 +38,19 @@ const GlobalProvider = ({children}) => {
         }
         return () => {}
     },[category, searchItemId]) 
+
+    const createOrder = (newOrder) => {
+        console.log(newOrder)
+        const db = getFirestore();
+        const ordersCollection = db.collection('ORDERS');
+        ordersCollection.add(newOrder).then((value) => {
+            setOrderNumber(value.id)
+        })
+
+    }
     
     return(
-        <GlobalContext.Provider value={{allItems, setCategory, setSearchItemId, itemFound}}>
+        <GlobalContext.Provider value={{allItems, setCategory, setSearchItemId, itemFound, createOrder, orderNumber}}>
             {children}
         </GlobalContext.Provider>
     )
