@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalContext';
 
 const SearchComponent = () => {
+
+    const { imgSearch } = useContext(GlobalContext)
+
     return(
             <>  
             <div className="row">
@@ -16,7 +20,7 @@ const SearchComponent = () => {
                             <div className="d-flex">
                                 <div className="card card__busqueda" id="card__one--color">
                                     <div className="image">
-                                        <img src="/images/guitarras_card.png" alt="guitarras"/>
+                                        <img src={imgSearch[0]} alt="guitarras"/>
                                     </div>
                                     <div className="details__card">
                                         <div className="center">
@@ -29,7 +33,7 @@ const SearchComponent = () => {
                             <div className="d-flex">
                                 <div className="card card__busqueda" id="card__two--color">
                                     <div className="image">
-                                        <img src="/images/bajos_card.jpeg" alt="bajos"/>
+                                        <img src={imgSearch[1]} alt="bajos"/>
                                     </div>
                                     <div className="details__card">
                                         <div className="center">
@@ -42,7 +46,7 @@ const SearchComponent = () => {
                             <div className="d-flex">
                                 <div className="card card__busqueda" id="card__three--color">
                                     <div className="image">
-                                        <img src="/images/amplificadores_card.jpeg" alt="amplificadores"/>
+                                        <img src={imgSearch[2]} alt="amplificadores"/>
                                     </div>
                                     <div className="details__card">
                                         <div className="center">
@@ -55,7 +59,7 @@ const SearchComponent = () => {
                             <div className="d-flex">
                                 <div className="card card__busqueda" id="card__four--color">
                                     <div className="image">
-                                        <img src="/images/auriculares_card.jpeg" alt="auriculares"/>
+                                        <img src={imgSearch[3]} alt="auriculares"/>
                                 </div>
                                 <div className="details__card">
                                     <div className="center">
@@ -68,7 +72,7 @@ const SearchComponent = () => {
                             <div className="d-flex">
                                 <div className="card card__busqueda" id="card__five--color">
                                     <div className="image">
-                                        <img src="/images/novedades_card.jpeg" alt="novedades"/>
+                                        <img src={imgSearch[4]} alt="novedades"/>
                                     </div>
                                     <div className="details__card">
                                         <div className="center">
@@ -81,7 +85,7 @@ const SearchComponent = () => {
                             <div className="d-flex">
                                 <div className="card card__busqueda" id="card__six--color">
                                     <div className="image">
-                                        <img src="/images/destacados_card.jpeg" alt="destacados"/>
+                                        <img src={imgSearch[5]} alt="destacados"/>
                                     </div>
                                     <div className="details__card">
                                         <div className="center">

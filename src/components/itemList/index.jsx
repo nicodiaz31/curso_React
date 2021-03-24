@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ItemDetailContainer from '../../containers/itemdetailcontainer';
 //import { CartContext } from '../../context/CartContext';
 import ItemComponent from '../item';
+import LoadingComponent from '../loading';
 
 const ItemListComponent = (props) => {
     const categoryName = props.categoryName.charAt(0).toUpperCase() + props.categoryName.slice(1)
@@ -42,9 +43,7 @@ const ItemListComponent = (props) => {
                         <ItemComponent item={item} key={item.id} onClick={showModal} getItemId={getItemId}/>
                     )) 
                     :
-                    <div className="spinner-border" role="status" style={{marginBottom: 15}}>
-                        <span className="sr-only">Loading...</span>
-                    </div>
+                    <LoadingComponent/>
                 }
                 {
                     showDetails ? <ItemDetailContainer showDetails={showDetails} itemId={itemId} setShowDetails={setShowDetails}/> : null

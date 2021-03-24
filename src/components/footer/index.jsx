@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalContext';
 
 const FooterComponent = () => {
+
+    const {logoFb, logoIg, logoTw, logo} = useContext(GlobalContext)
+
     return(
         <>
         <footer className="footerMain page-footer">
@@ -27,7 +31,7 @@ const FooterComponent = () => {
                             <ul>
                                 <li><Link className="footerMain__list--title" to={`/promociones`}>Promociones</Link></li>
                                 <li><Link to={`/category/descuentos`}>Descuentos</Link></li>
-                                <li><Link to={`/promociones/promociones_bancarias`}>Promociones Bancarias</Link></li>
+                                <li><Link to={`/promociones_bancarias`}>Promociones Bancarias</Link></li>
                             </ul>
                         </div>
                         <hr className="clearfix w-100 d-md-none"/>
@@ -35,9 +39,9 @@ const FooterComponent = () => {
                             <ul>
                                 <li><Link className="footerMain__list--title" to={`/contacto`}>Contacto</Link></li>
                                 <li><Link to={`/contacto`}>Escríbenos</Link></li>
-                                <li><img className="footerMain__logo--tamano" src="/images/fbLogo.png" alt="logoFb"/><Link to={"https://facebook.com/tiendaMusica"}>@tiendaMusica</Link></li>
-                                <li><img className="footerMain__logo--tamano" src="/images/igLogo.png" alt="logoIg"/><Link to={"https://instagram.com/tiendaMusica"}>@tiendaMusica</Link></li>
-                                <li><img className="footerMain__logo--tamano" src="/images/twLogo.png" alt="logoTw"/><Link to={"https://twitter.com/tiendaMusica"}>@tiendaMusica</Link></li>
+                                <li><img className="footerMain__logo--tamano" src={logoFb} alt="logoFb"/><Link to={"https://facebook.com/tiendaMusica"}>@tiendaMusica</Link></li>
+                                <li><img className="footerMain__logo--tamano" src={logoIg} alt="logoIg"/><Link to={"https://instagram.com/tiendaMusica"}>@tiendaMusica</Link></li>
+                                <li><img className="footerMain__logo--tamano" src={logoTw} alt="logoTw"/><Link to={"https://twitter.com/tiendaMusica"}>@tiendaMusica</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -47,7 +51,7 @@ const FooterComponent = () => {
                     </div>
                 </div>
                 <div className="footer__copyright--fondo footer-copyright">
-                    <img className="footerMain__logotienda--tamano" src="/images/logo.png" alt="logo"/>
+                    <img className="footerMain__logotienda--tamano" src={logo} alt="logo"/>
                     <label>TiendaMusica</label><br/>
                     <label>© Copyright 2020 TiendaMusica. Todos los derechos reservados</label>
                 </div>

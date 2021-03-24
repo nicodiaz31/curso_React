@@ -1,5 +1,6 @@
 import firebase  from 'firebase/app';
-import "@firebase/firestore"
+import "@firebase/firestore";
+import "firebase/storage";
 
 const app = firebase.initializeApp({
     apiKey: "AIzaSyDCp4gG8j9OYk05-pby3b2RV7Npx1oSmsQ",
@@ -19,6 +20,10 @@ export const getFirebase = () => {
 export const getFirestore = () => {
     //firebase.analytics();
     return firebase.firestore(app)
+}
+
+export const getStorage = () => {
+    return firebase.storage()
 }
   
   

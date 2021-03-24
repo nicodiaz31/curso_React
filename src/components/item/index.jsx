@@ -22,7 +22,7 @@ const ItemComponent = (props) => {
             <div className="d-flex">
                 <div className="card" id="card__one--color">
                     <div className="image">
-                        { ban ? <img src={"/"+item.imagen} className='img__ancha' alt={item.modelo}/>:<img src={"/"+item.imagen} alt={item.modelo}/>}
+                        { ban ? <img src={item.imagen} className='img__ancha' alt={item.modelo}/>:<img src={item.imagen} alt={item.modelo}/>}
                     </div>
                     <div className="details__card">
                         <div className="center">

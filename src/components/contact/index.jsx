@@ -14,7 +14,7 @@ const ContactComponent = () => {
                             <label style={{fontWeight: 900}}>Desea ser contacto por teléfono?</label>
                             <select className="browser-default custom-select mb-4">
                                 <option value="" disabled>Escoja una opción</option>
-                                <option value="1" selected>Si</option>
+                                <option value="1" defaultValue>Si</option>
                                 <option value="2">No</option>
                             </select>
                             <div className="form-group">

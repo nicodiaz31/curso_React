@@ -11,6 +11,8 @@ import CartProvider from './context/CartContext';
 import ContactComponent from './components/contact';
 import SearchComponent from './components/search';
 import GlobalProvider from './context/GlobalContext';
+import CategoriesComponent from './components/categories';
+import PromocionesBancariasComponent from './components/promocionesbancarias';
 
 let numberArticles = 3;
 
@@ -31,7 +33,7 @@ function App() {
               </Route>
               <Route path="/item/:itemId">
                 <ItemDetailContainer/> 
-              </Route>  
+              </Route>
               <Route path="/cart">
                 <CartComponent />
               </Route>
@@ -40,6 +42,15 @@ function App() {
               </Route>
               <Route path="/busqueda">
                 <SearchComponent/>
+              </Route>
+              <Route path="/promociones_bancarias">
+                <PromocionesBancariasComponent/>
+              </Route>
+              <Route path="/:categories">
+                <CategoriesComponent/>
+              </Route>
+              <Route path="*">
+                
               </Route>
             </Switch>
             <FooterComponent />

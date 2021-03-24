@@ -2,15 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ShoppingCart from '../shoppingcart';
 import { Link }  from 'react-router-dom';
+import { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalContext';
 
 function Navbar(props) {
-	console.log(props.numberArticles);
+	const { logo } = useContext(GlobalContext);
+
     return ( 
         <>
            <nav className="navbar navbar-expand-lg navbar__background--color navbar-dark">
 				<div className="container-fluid">
 					<div className="navbar__logo">
-						<Link to={`/`} className="navbar-brand"><img className="navbar__logo--tamano" src="/images/logo.png" alt="logo"/></Link>
+						<Link to={`/`} className="navbar-brand"><img className="navbar__logo--tamano" src={logo} alt="logo"/></Link>
 					</div>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
 					    <span className="navbar-toggler-icon"></span>
@@ -35,7 +38,7 @@ function Navbar(props) {
 							<li className="nav-item">
 								<Link className="nav-link" to={`/promociones`}>Promociones</Link>
 								<ul className="dropdown-menu navbar__sublist">
-									<li className="nav__link--hover"><Link to={`/descuentos`} className="dropdown-item">Descuentos</Link></li>
+									<li className="nav__link--hover"><Link to={`/category/descuentos`} className="dropdown-item">Descuentos</Link></li>
 									<li className="nav__link--hover"><Link to={`/promociones_bancarias`} className="dropdown-item">Promociones Bancarias</Link></li>
 								</ul>
 							</li>

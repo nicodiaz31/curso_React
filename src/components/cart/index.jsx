@@ -55,7 +55,7 @@ const CartComponent = () => {
                                             <td>
                                                 <div className="cart-info">
                                                     <div className="div-img" style={{width:130, minWidth:130, maxHeight:130}}>
-                                                        <img src={"/"+producto.item.imagen} alt={producto.item.modelo} style={{width:60,marginLeft:25}}/>
+                                                        <img src={producto.item.imagen} alt={producto.item.modelo} style={{width:60,marginLeft:25}}/>
                                                     </div>
                                                     <div>
                                                         <p>{producto.item.marca} {producto.item.modelo}</p>
