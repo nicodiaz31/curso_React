@@ -15,10 +15,6 @@ const CartComponent = () => {
         return () => {};
     },[calcTotal])
 
-    cart.forEach(prod => {
-        console.log(prod.item)
-    })
-
     const completeOrder = () => {
         setPurchaseOrder(prev => !prev)
     }
