@@ -32,7 +32,6 @@ function ItemListContainer(){
         if (categoryList === 'destacado' || categoryList === 'descuento' || categoryList === 'novedades'){
             allItems.forEach(element =>{
                 if(element[categoryList] === true){
-                    console.log(element)
                     setItems(prevArray => [...prevArray, element])
                     setLoading(true)
                 }

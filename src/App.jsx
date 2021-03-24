@@ -49,9 +49,6 @@ function App() {
               <Route path="/:categories">
                 <CategoriesComponent/>
               </Route>
-              <Route path="*">
-                
-              </Route>
             </Switch>
             <FooterComponent />
           </BrowserRouter>

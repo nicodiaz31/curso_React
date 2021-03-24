@@ -109,7 +109,6 @@ const GlobalProvider = ({children}) => {
     },[categoryName])    
 
     const createOrder = (newOrder) => {
-        console.log(newOrder)
         const db = getFirestore();
         const ordersCollection = db.collection('ORDERS');
         ordersCollection.add(newOrder).then((value) => {

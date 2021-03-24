@@ -9,15 +9,9 @@ const ItemListComponent = (props) => {
     const items = props.items;
     const [showDetails, setShowDetails] = useState(false);
     const [itemId, setItemId] = useState();
-    //const cartContext = useContext(CartContext);
-    //console.log(cartContext);
-
-    
 
     const showModal = () => {
-        console.log(showDetails)
         setShowDetails(prev => !prev)
-        console.log(showDetails)
     }
 
     const getItemId = (itId) => {

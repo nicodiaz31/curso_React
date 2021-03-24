@@ -10,7 +10,7 @@ const ItemDetailContainer = (props) => {
     const [item, setItem] = useState();
 
     useEffect(()=>{
-        itemId ? setSearchItemId(itemId): console.log("nada")
+        itemId ? setSearchItemId(itemId): console.log("")
         return () => {}
     },[setSearchItemId, itemId])
 
